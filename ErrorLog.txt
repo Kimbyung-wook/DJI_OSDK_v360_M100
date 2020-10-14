@@ -1,0 +1,68 @@
+./djiosdk-telemetry-sample UserConfig.txt 
+Read App ID
+User Configuration read successfully. 
+
+
+STATUS/1 @ init, L56: Attempting to open device /dev/ttyUSB0 with baudrate 921600...
+
+STATUS/1 @ init, L66: ...Serial started successfully.
+
+ERRORLOG/1 @ getDroneVersion, L1339: Drone version not obtained! Please do not proceed.
+Possible reasons:
+	Serial port connection:
+		* SDK is not enabled, please check DJI Assistant2 -> SDK -> [v] Enable API Control.
+		* Baudrate is not correct, please double-check from DJI Assistant2 -> SDK -> baudrate.
+		* TX and RX pins are inverted.
+		* Serial port is occupied by another program.
+		* Permission required. Please do 'sudo usermod -a -G dialout $USER' (you do not need to replace $USER with your username). Then logout and login again
+
+ERRORLOG/1 @ activate, L1228: Unable to initialize some vehicle components!
+STATUS/1 @ getErrorCodeMessage, L644: initVehicle
+STATUS/1 @ getCommonErrorCodeMessage, L710: ACK_NO_RESPONSE_ERROR
+Vehicle not initialized, exiting.
+
+
+
+
+
+
+
+./djiosdk-telemetry-sample UserConfig.txt 
+Read App ID
+User Configuration read successfully. 
+
+
+STATUS/1 @ init, L56: Attempting to open device /dev/ttyUSB0 with baudrate 921600...
+
+STATUS/1 @ init, L66: ...Serial started successfully.
+
+STATUS/1 @ parseDroneVersionInfo, L687: Device Serial No. = 041DF30718
+
+STATUS/1 @ parseDroneVersionInfo, L689: Hardware = M100
+
+STATUS/1 @ parseDroneVersionInfo, L690: Firmware = 3.1.10.0
+
+STATUS/1 @ parseDroneVersionInfo, L693: Version CRC = 0xA6453AAC
+
+STATUS/1 @ initSubscriber, L738: Telemetry subscription mechanism is not supported on this platform!
+
+STATUS/1 @ initMFIO, L941: MFIO is not supported on this platform!
+
+STATUS/1 @ initHardSync, L1003: Hardware Sync is not supported on this platform!
+
+STATUS/1 @ activate, L1239: version 0x3010A00
+
+STATUS/1 @ getErrorCodeMessage, L644: activate
+STATUS/1 @ getCMDSetActivationMSG, L693: NEW_DEVICE_ERROR
+
+ERRORLOG/1 @ activate, L1264: Failed to activate please retry SET 0x0 ID 0x1 code 0x3
+
+ERRORLOG/1 @ activate, L1271: Solutions for NEW_DEVICE_ERROR:
+	* Double-check your app_id and app_key in UserConfig.txt. Does it match with your DJI developer account?
+	* If this is a new device, please make sure your DJI Go App is connected to internet to activate the new device for the first time.
+	* If this device is previously activated with another app_id and app_key, you will need to re-activate it again (with internet through DJI GO App).
+	* A new device needs to be activated twice to fix the NEW_DEVICE_ERROR, so please try it twice.
+
+STATUS/1 @ getErrorCodeMessage, L644: initVehicle
+STATUS/1 @ getCMDSetActivationMSG, L693: NEW_DEVICE_ERROR
+Vehicle not initialized, exiting. 
